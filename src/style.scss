@@ -1,0 +1,940 @@
+* {
+  box-sizing: border-box;
+}
+img {
+  width: 200px;
+}
+@mixin flexCenter($justify, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+}
+body {
+  width: 100vw;
+  min-height: 100vh;
+  @include flexCenter(center, column);
+  justify-content: flex-start;
+}
+
+// style for OurTour
+.tourApp {
+  @include flexCenter(center, column);
+  h1 {
+    min-width: 200px;
+    text-align: center;
+    color: #1f2633;
+    // border: 1px solid #1f2633;
+    padding: 1rem;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+.listOfTour {
+  width: 400px;
+}
+.tour {
+  @include flexCenter(center, column);
+  padding: 0.5rem;
+  img {
+    width: 380px;
+    height: 270px;
+    object-fit: cover;
+  }
+  .nameAndPrice {
+    width: 100%;
+    padding: 0.5rem 0.7rem;
+    @include flexCenter(space-between, row);
+    padding-bottom: 0;
+    margin-bottom: 0;
+    h3 {
+      flex-basis: 80%;
+      color: #3a475f;
+    }
+    span {
+      font-weight: bold;
+      color: rgb(64, 64, 184);
+    }
+  }
+  p {
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: justify;
+  }
+  button {
+    font-size: 20px;
+    padding: 0.5rem;
+    width: 200px;
+    border: none;
+    background-color: rgb(221, 61, 61);
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+.listOfTour {
+  text-align: center;
+  .refresh {
+    font-size: 20px;
+    padding: 0.5rem;
+    width: 200px;
+    border: none;
+    background-color: rgb(75, 163, 75);
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 15px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+//style for review
+
+.reviews {
+  width: 450px;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  @include flexCenter(center, column);
+  padding: 0 1rem;
+  h1 {
+    margin-top: 0;
+    padding: 1rem;
+    color: #1f2633;
+  }
+  .mainSection {
+    width: 100%;
+    @include flexCenter(center, column);
+    position: relative;
+    .imagePart {
+      @include flexCenter(center, column);
+      position: relative;
+      .empty {
+        width: 130px;
+        height: 130px;
+        // border: 1px solid blue;
+        border-radius: 50%;
+        background-color: rgb(106, 106, 231);
+      }
+      .image {
+        position: absolute;
+        left: -8px;
+        top: 4px;
+        img {
+          @extend .empty;
+          object-fit: cover;
+        }
+      }
+      .coma {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: rgb(106, 106, 231);
+        @include flexCenter(center, column);
+        border-radius: 50%;
+        top: 10px;
+        left: 0;
+        span {
+          color: white;
+          font-size: 30px;
+          margin-top: -15px;
+        }
+      }
+    }
+    .name-profession {
+      @include flexCenter(center, column);
+      margin-top: 10px;
+      h3 {
+        margin: 0;
+        font-size: 15px;
+        &:first-child {
+          color: #1f2633;
+        }
+        &:last-child {
+          color: rgb(106, 106, 231);
+        }
+      }
+    }
+    .info {
+      @include flexCenter(center, column);
+      p {
+        text-align: center;
+        color: rgb(105, 103, 103);
+      }
+    }
+    .left-right {
+      button {
+        border: none;
+        padding: 0.3rem 0.5rem;
+        background-color: white;
+        margin-right: 10px;
+        font-size: 17px;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.5, 1.5);
+        }
+      }
+      margin-bottom: 10px;
+    }
+    .surprise {
+      width: 150px;
+      border: none;
+      padding: 0.5rem 1rem;
+      background-color: rgb(169, 169, 224);
+      color: rgb(68, 68, 175);
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .reviews {
+    width: 350px;
+  }
+}
+
+//OurMenu
+#root {
+  width: 100%;
+  @include flexCenter(flex-start, column);
+}
+.all {
+  width: 100%;
+  @include flexCenter(flex-start, row);
+  flex-wrap: wrap;
+  // border: 1px solid green;
+}
+
+.eachMenu {
+  width: 48%;
+  @include flexCenter(center, row);
+  padding: 1rem;
+  margin: 1%;
+  // border: 1px solid red;
+
+  .image {
+    flex-basis: 40%;
+    img {
+      width: 320px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+    }
+  }
+  .info {
+    flex-basis: 80%;
+
+    @include flexCenter(center, column);
+    padding: 0.5rem 1rem;
+    margin: 10px auto;
+    .namePrice {
+      width: 100%;
+      @include flexCenter(center, row);
+      h3 {
+        flex-basis: 80%;
+        text-align: left;
+        margin: 0 auto;
+        color: rgb(114, 114, 177);
+      }
+      span {
+        text-align: center;
+        flex-basis: 20%;
+        color: rgb(75, 75, 180);
+        font-weight: bold;
+      }
+    }
+    p {
+      text-align: left;
+      color: rgb(78, 75, 75);
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .all {
+    width: 100%;
+    @include flexCenter(center, column);
+    // margin-left: 10%;
+    .eachMenu {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.menu {
+  width: 100%;
+  @include flexCenter(center, column);
+  flex-wrap: wrap;
+  h1 {
+    // margin: 0 auto;
+    padding: 1rem;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+  }
+  .linkOfMenu {
+    @include flexCenter(center, row);
+    padding: 0rem;
+    width: 100%;
+
+    .link {
+      text-decoration: none;
+      font-size: 15px;
+      h3 {
+        padding: 1rem 2rem;
+        color: rgb(85, 85, 146);
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.2, 1.2);
+        }
+      }
+    }
+  }
+}
+
+//Navbar
+.NavBar {
+  padding: 1rem 2rem;
+  width: 100%;
+  @include flexCenter(space-between, row);
+  .logo {
+    width: 35%;
+    padding: 1rem;
+    font-size: 20px;
+    color: rgb(61, 61, 170);
+    .bar {
+      display: none;
+    }
+  }
+  .allLink {
+    width: 40%;
+    @include flexCenter(space-between, row);
+    .link {
+      text-decoration: none;
+      color: rgb(64, 160, 64);
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.4, 1.4);
+      }
+    }
+  }
+  .icons {
+    width: 25%;
+    @include flexCenter(space-around, row);
+    i {
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.4, 1.4);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .NavBar {
+    @include flexCenter(center, column);
+    .logo {
+      width: 100%;
+      .bar {
+        display: flex;
+        cursor: pointer;
+      }
+      @include flexCenter(space-between, row);
+    }
+    .allLink {
+      @include flexCenter(center, column);
+      .link {
+        font-size: 22px;
+        padding: 1rem;
+        margin: 10px auto;
+      }
+    }
+    .icons {
+      display: none;
+    }
+  }
+}
+
+//Project one
+.sideBar {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 0 0.5rem;
+  .bar {
+    // display: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .content {
+    padding: 1rem;
+    border: 2px solid #1f2633;
+    @include flexCenter(flex-start, column);
+    width: 350px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    // left: -1000px;
+    animation: animate 0.1s linear;
+    // overflow: hidden;
+    z-index: 1;
+    background-color: white;
+    .heading {
+      width: 100%;
+      @include flexCenter(space-between, row);
+      h1 {
+        color: #4a6eb1;
+      }
+      span {
+        font-size: 20px;
+        cursor: pointer;
+        color: rgb(204, 20, 20);
+        i {
+          &:hover {
+            transform: scale(1.5, 1.5);
+          }
+        }
+      }
+    }
+    .link {
+      @include flexCenter(center, column);
+      width: 100%;
+      span {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        font-size: 20px;
+        color: rebeccapurple;
+        margin: 5px;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+    .icons {
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+      @include flexCenter(space-around, row);
+      i {
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.5, 1.5);
+        }
+      }
+    }
+  }
+}
+.toggleAnimation {
+  left: -1000px;
+  animation: animate 1s linear;
+}
+@keyframes animate {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@keyframes hideSlowly {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.showModel {
+  width: 100%;
+  height: 90vh;
+
+  @include flexCenter(center, column);
+  z-index: -1;
+  .ModelContent {
+    width: 60%;
+    @include flexCenter(center, column);
+    padding: 1rem;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    span {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 20px;
+      i {
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.2, 1.2);
+        }
+      }
+    }
+  }
+  button {
+    padding: 0.5rem 0.7rem;
+    border: none;
+    background-color: black;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+.allContent {
+  background-color: white;
+}
+
+//stripe Project
+
+// .product {
+//   border: 2px solid green;
+//   @include flexCenter(center, column);
+//   .main {
+//     width: 200px;
+//     text-align: center;
+//     padding: 1rem;
+//     font-size: 20px;
+//     color: #4a6eb1;
+//   }
+// }
+.stripe {
+  width: 100%;
+  @include flexCenter(space-around, row);
+  h1 {
+    flex-basis: 30%;
+    margin-left: 10%;
+    color: #4a6eb1;
+  }
+  .links {
+    flex-basis: 50%;
+    @include flexCenter(space-around, row);
+    font-size: 19px;
+    color: rgb(117, 73, 160);
+    .same {
+      position: relative;
+      .main {
+        cursor: pointer;
+        margin: 20px auto;
+      }
+      .show {
+        position: absolute;
+      }
+    }
+  }
+  h3 {
+    text-align: center;
+    flex-basis: 20%;
+  }
+  .bar {
+    cursor: pointer;
+    display: none;
+  }
+}
+
+.listOfProducts {
+  margin-top: 10px;
+  margin-left: -270px;
+  @include flexCenter(center, column);
+  position: relative;
+  margin-top: 20px;
+  .empty {
+    width: 30px;
+    height: 30px;
+    // border: 2px solid #1f2633;
+    transform: rotateZ(45deg);
+    position: absolute;
+    z-index: -1;
+    top: -4px;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+  }
+  .list {
+    z-index: 1;
+    background-color: white;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+
+    width: 600px;
+    overflow: hidden;
+    .heading {
+      width: 100%;
+      @include flexCenter(flex-start, column);
+      align-items: flex-start;
+      span {
+        padding: 0.5rem 1rem;
+        margin: 5px 30px;
+        font-size: 20px;
+        color: rgb(80, 77, 77);
+      }
+      .allList {
+        @include flexCenter(flex-start, row);
+        span {
+          margin: 10px 30px;
+          font-size: 16px;
+          color: black;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .stripe {
+    width: 100%;
+    .links {
+      display: none;
+    }
+    h3 {
+      display: none;
+    }
+    .bar {
+      display: flex;
+      cursor: pointer;
+    }
+  }
+}
+
+.allMix {
+  width: 88%;
+  height: 100vh;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  @include flexCenter(flex-start, column);
+  position: relative;
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  background-color: white;
+  .product {
+    width: 100%;
+    padding: 1rem;
+    margin: 10px;
+    @include flexCenter(flex-start, column);
+    align-items: flex-start;
+    .title {
+      padding: 1rem;
+      margin-bottom: 20px;
+      margin-left: 10px;
+      font-size: 20px;
+      color: #4a6eb1;
+    }
+    .allList {
+      span {
+        margin: 10px;
+        padding: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+  .developer {
+    @extend .product;
+  }
+  .company {
+    @extend .product;
+  }
+  .cancel {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    i {
+      font-size: 20px;
+      color: rgb(209, 30, 30);
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.3, 1.3);
+      }
+    }
+  }
+}
+
+//Cart Section
+.cartSection {
+  width: 100%;
+  @include flexCenter(center, column);
+  border: 3px solid green;
+  .header {
+    width: 100%;
+    @include flexCenter(space-around, row);
+    background-color: #4a6eb1;
+    color: white;
+    .bag {
+      width: 100px;
+      @include flexCenter(center, column);
+      position: relative;
+      span {
+        font-size: 20px;
+      }
+      .count {
+        position: absolute;
+        top: -15px;
+        right: 25px;
+      }
+    }
+  }
+  .mainSection {
+    width: 100%;
+    @include flexCenter(center, column);
+    h1 {
+      color: #4a6eb1;
+    }
+    .products {
+      margin: 20px auto;
+      width: 60%;
+      @include flexCenter(space-between, row);
+      .info {
+        @include flexCenter(center, row);
+        img {
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+        .description {
+          @include flexCenter(center, column);
+          span {
+            padding: 0.2rem 0.5rem;
+            margin: 0px auto;
+            color: #3a475f;
+          }
+          button {
+            padding: 0.5rem;
+            border: none;
+            background-color: white;
+            color: rgb(179, 65, 65);
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+      }
+      .quantity {
+        @include flexCenter(center, column);
+        span {
+          margin: 5px auto;
+          i {
+            cursor: pointer;
+            &:hover {
+              transform: scale(1.3, 1.3);
+            }
+          }
+        }
+      }
+    }
+    hr {
+      width: 60%;
+      color: #1f2633;
+      font-weight: bold;
+    }
+    .summary {
+      width: 60%;
+      @include flexCenter(space-between, row);
+      color: #3a475f;
+    }
+    button {
+      padding: 0.5rem;
+      border: none;
+      background-color: white;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: rgb(196, 57, 57);
+      width: 200px;
+      margin: 20px auto;
+      border-radius: 5px;
+      padding: 0.8rem 0;
+    }
+  }
+}
+
+//Drinks
+
+.Drinks {
+  width: 100%;
+  @include flexCenter(center, column);
+  .Navbar {
+    width: 100%;
+    @include flexCenter(space-around, row);
+    .logo {
+      h1 {
+        color: #4a6eb1;
+      }
+    }
+    .links {
+      .link {
+        text-decoration: none;
+        font-size: 20px;
+        span {
+          cursor: pointer;
+          font-size: 20px;
+          margin: 5px;
+          padding: 1rem;
+          &:hover {
+            color: red;
+            transform: scale(2.3, 1.3);
+          }
+        }
+      }
+    }
+  }
+}
+main {
+  width: 100%;
+  @include flexCenter(center, column);
+  .searchArea {
+    @include flexCenter(center, column);
+    position: relative;
+    margin-top: 20px;
+    input {
+      font-size: 18px;
+      padding: 0.5rem 0.8rem;
+      border: 2px solid #1f2633;
+      border-radius: 5px;
+      z-index: 0;
+      color: #4a6eb1;
+      &:focus {
+        outline: none;
+      }
+    }
+    label {
+      background-color: white;
+      overflow: hidden;
+      z-index: 1;
+      position: absolute;
+      top: -10px;
+      color: #1f2633;
+    }
+  }
+  .mainSection {
+    width: 100%;
+    @include flexCenter(center, column);
+    h1 {
+      color: rgb(69, 69, 175);
+    }
+    .listOfDrinks {
+      width: 100%;
+      padding: 1rem 2rem;
+      @include flexCenter(space-around, row);
+      flex-wrap: wrap;
+      .eachDrink {
+        width: 270px;
+        margin: 20px;
+        @include flexCenter(center, column);
+        box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        img {
+          width: 250px;
+          height: 250px;
+          object-fit: cover;
+          // border-radius: 20px;
+          border-radius: 50%;
+          margin-bottom: 20px;
+        }
+        .name {
+          color: #466092;
+        }
+        .title {
+          color: #272b31;
+        }
+        .type {
+          color: rgb(161, 158, 158);
+        }
+        span {
+          padding: 0.2rem 0.5rem;
+        }
+        .Link {
+          text-decoration: none;
+        }
+        button {
+          color: white;
+          padding: 0.5rem;
+          border: none;
+          background-color: white;
+          font-weight: bold;
+          cursor: pointer;
+          background-color: rgb(75, 143, 75);
+          width: 200px;
+          margin: 20px auto;
+          border-radius: 5px;
+          padding: 0.8rem 0;
+        }
+      }
+    }
+  }
+}
+.singleDrink {
+  width: 100%;
+  @include flexCenter(center, column);
+  .details {
+    width: 100%;
+    @include flexCenter(center, column);
+    padding: 2rem;
+    button {
+      padding: 0.5rem;
+      border: none;
+      background-color: white;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: rgb(216, 74, 74);
+      width: 200px;
+      margin: 20px auto;
+      border-radius: 5px;
+      padding: 0.8rem 0;
+    }
+
+    .information {
+      margin: 30px;
+      max-width: 800px;
+      @include flexCenter(space-between, row);
+      // flex-wrap: wrap;
+      img {
+        width: 290px;
+        height: 290px;
+        object-fit: cover;
+        border-radius: 20px;
+        // margin: 0 auto;
+      }
+      .info {
+        width: 100%;
+        @include flexCenter(center, column);
+        align-items: flex-start;
+
+        div {
+          @include flexCenter(flex-start, row);
+          align-items: flex-start;
+          margin: 15px 20px;
+          .same {
+            font-size: 15px;
+            background-color: #272b31;
+            color: white;
+            padding: 0.5rem;
+          }
+          .normal {
+            margin-left: 10px;
+            font-size: 15px;
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .details {
+    .information {
+      // width: 100%;
+      width: 350px;
+      @include flexCenter(center, column);
+      flex-wrap: wrap;
+    }
+  }
+}
+.about {
+  width: 80%;
+  height: 80vh;
+  font-size: 19px;
+  text-align: center;
+  @include flexCenter(center, row);
+}

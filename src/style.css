@@ -1,0 +1,1089 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 200px;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.tourApp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.tourApp h1 {
+  min-width: 200px;
+  text-align: center;
+  color: #1f2633;
+  padding: 1rem;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+}
+
+.listOfTour {
+  width: 400px;
+}
+
+.tour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5rem;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+.tour img {
+  width: 380px;
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tour .nameAndPrice {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.tour .nameAndPrice h3 {
+  flex-basis: 80%;
+  color: #3a475f;
+}
+.tour .nameAndPrice span {
+  font-weight: bold;
+  color: #4040b8;
+}
+.tour p {
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: justify;
+}
+.tour button {
+  font-size: 20px;
+  padding: 0.5rem;
+  width: 200px;
+  border: none;
+  background-color: #dd3d3d;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.listOfTour {
+  text-align: center;
+}
+.listOfTour .refresh {
+  font-size: 20px;
+  padding: 0.5rem;
+  width: 200px;
+  border: none;
+  background-color: #4ba34b;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 15px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.reviews {
+  width: 450px;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+.reviews h1 {
+  margin-top: 0;
+  padding: 1rem;
+  color: #1f2633;
+}
+.reviews .mainSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.reviews .mainSection .imagePart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.reviews .mainSection .imagePart .empty, .reviews .mainSection .imagePart .image img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #6a6ae7;
+}
+.reviews .mainSection .imagePart .image {
+  position: absolute;
+  left: -8px;
+  top: 4px;
+}
+.reviews .mainSection .imagePart .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.reviews .mainSection .imagePart .coma {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #6a6ae7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+  top: 10px;
+  left: 0;
+}
+.reviews .mainSection .imagePart .coma span {
+  color: white;
+  font-size: 30px;
+  margin-top: -15px;
+}
+.reviews .mainSection .name-profession {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.reviews .mainSection .name-profession h3 {
+  margin: 0;
+  font-size: 15px;
+}
+.reviews .mainSection .name-profession h3:first-child {
+  color: #1f2633;
+}
+.reviews .mainSection .name-profession h3:last-child {
+  color: #6a6ae7;
+}
+.reviews .mainSection .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.reviews .mainSection .info p {
+  text-align: center;
+  color: #696767;
+}
+.reviews .mainSection .left-right {
+  margin-bottom: 10px;
+}
+.reviews .mainSection .left-right button {
+  border: none;
+  padding: 0.3rem 0.5rem;
+  background-color: white;
+  margin-right: 10px;
+  font-size: 17px;
+  cursor: pointer;
+}
+.reviews .mainSection .left-right button:hover {
+  transform: scale(1.5, 1.5);
+}
+.reviews .mainSection .surprise {
+  width: 150px;
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: #a9a9e0;
+  color: #4444af;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .reviews {
+    width: 350px;
+  }
+}
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.all {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.eachMenu {
+  width: 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 1rem;
+  margin: 1%;
+}
+.eachMenu .image {
+  flex-basis: 40%;
+}
+.eachMenu .image img {
+  width: 320px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+}
+.eachMenu .info {
+  flex-basis: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  margin: 10px auto;
+}
+.eachMenu .info .namePrice {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.eachMenu .info .namePrice h3 {
+  flex-basis: 80%;
+  text-align: left;
+  margin: 0 auto;
+  color: #7272b1;
+}
+.eachMenu .info .namePrice span {
+  text-align: center;
+  flex-basis: 20%;
+  color: #4b4bb4;
+  font-weight: bold;
+}
+.eachMenu .info p {
+  text-align: left;
+  color: #4e4b4b;
+}
+
+@media screen and (max-width: 600px) {
+  .all {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .all .eachMenu {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.menu h1 {
+  padding: 1rem;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+}
+.menu .linkOfMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 0rem;
+  width: 100%;
+}
+.menu .linkOfMenu .link {
+  text-decoration: none;
+  font-size: 15px;
+}
+.menu .linkOfMenu .link h3 {
+  padding: 1rem 2rem;
+  color: #555592;
+  cursor: pointer;
+}
+.menu .linkOfMenu .link h3:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.NavBar {
+  padding: 1rem 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.NavBar .logo {
+  width: 35%;
+  padding: 1rem;
+  font-size: 20px;
+  color: #3d3daa;
+}
+.NavBar .logo .bar {
+  display: none;
+}
+.NavBar .allLink {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.NavBar .allLink .link {
+  text-decoration: none;
+  color: #40a040;
+  cursor: pointer;
+}
+.NavBar .allLink .link:hover {
+  transform: scale(1.4, 1.4);
+}
+.NavBar .icons {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.NavBar .icons i {
+  cursor: pointer;
+}
+.NavBar .icons i:hover {
+  transform: scale(1.4, 1.4);
+}
+
+@media screen and (max-width: 600px) {
+  .NavBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .NavBar .logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .NavBar .logo .bar {
+    display: flex;
+    cursor: pointer;
+  }
+  .NavBar .allLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .NavBar .allLink .link {
+    font-size: 22px;
+    padding: 1rem;
+    margin: 10px auto;
+  }
+  .NavBar .icons {
+    display: none;
+  }
+}
+.sideBar {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 0 0.5rem;
+}
+.sideBar .bar {
+  font-size: 30px;
+  cursor: pointer;
+}
+.sideBar .content {
+  padding: 1rem;
+  border: 2px solid #1f2633;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  -webkit-animation: animate 0.1s linear;
+          animation: animate 0.1s linear;
+  z-index: 1;
+  background-color: white;
+}
+.sideBar .content .heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.sideBar .content .heading h1 {
+  color: #4a6eb1;
+}
+.sideBar .content .heading span {
+  font-size: 20px;
+  cursor: pointer;
+  color: #cc1414;
+}
+.sideBar .content .heading span i:hover {
+  transform: scale(1.5, 1.5);
+}
+.sideBar .content .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.sideBar .content .link span {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  font-size: 20px;
+  color: rebeccapurple;
+  margin: 5px;
+  cursor: pointer;
+}
+.sideBar .content .link span:hover {
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+}
+.sideBar .content .icons {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.sideBar .content .icons i {
+  cursor: pointer;
+}
+.sideBar .content .icons i:hover {
+  transform: scale(1.5, 1.5);
+}
+
+.toggleAnimation {
+  left: -1000px;
+  -webkit-animation: animate 1s linear;
+          animation: animate 1s linear;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@-webkit-keyframes hideSlowly {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes hideSlowly {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.showModel {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: -1;
+}
+.showModel .ModelContent {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.showModel .ModelContent span {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+}
+.showModel .ModelContent span i {
+  cursor: pointer;
+}
+.showModel .ModelContent span i:hover {
+  transform: scale(1.2, 1.2);
+}
+.showModel button {
+  padding: 0.5rem 0.7rem;
+  border: none;
+  background-color: black;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.allContent {
+  background-color: white;
+}
+
+.stripe {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.stripe h1 {
+  flex-basis: 30%;
+  margin-left: 10%;
+  color: #4a6eb1;
+}
+.stripe .links {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  font-size: 19px;
+  color: #7549a0;
+}
+.stripe .links .same {
+  position: relative;
+}
+.stripe .links .same .main {
+  cursor: pointer;
+  margin: 20px auto;
+}
+.stripe .links .same .show {
+  position: absolute;
+}
+.stripe h3 {
+  text-align: center;
+  flex-basis: 20%;
+}
+.stripe .bar {
+  cursor: pointer;
+  display: none;
+}
+
+.listOfProducts {
+  margin-top: 10px;
+  margin-left: -270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-top: 20px;
+}
+.listOfProducts .empty, .listOfProducts .reviews .mainSection .imagePart .image img, .reviews .mainSection .imagePart .image .listOfProducts img {
+  width: 30px;
+  height: 30px;
+  transform: rotateZ(45deg);
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+}
+.listOfProducts .list {
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  overflow: hidden;
+}
+.listOfProducts .list .heading {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.listOfProducts .list .heading span {
+  padding: 0.5rem 1rem;
+  margin: 5px 30px;
+  font-size: 20px;
+  color: #504d4d;
+}
+.listOfProducts .list .heading .allList {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.listOfProducts .list .heading .allList span {
+  margin: 10px 30px;
+  font-size: 16px;
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .stripe {
+    width: 100%;
+  }
+  .stripe .links {
+    display: none;
+  }
+  .stripe h3 {
+    display: none;
+  }
+  .stripe .bar {
+    display: flex;
+    cursor: pointer;
+  }
+}
+.allMix {
+  width: 88%;
+  height: 100vh;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  background-color: white;
+}
+.allMix .product, .allMix .company, .allMix .developer {
+  width: 100%;
+  padding: 1rem;
+  margin: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.allMix .product .title, .allMix .company .title, .allMix .developer .title {
+  padding: 1rem;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  color: #4a6eb1;
+}
+.allMix .product .allList span, .allMix .company .allList span, .allMix .developer .allList span {
+  margin: 10px;
+  padding: 1rem;
+  cursor: pointer;
+}
+.allMix .cancel {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.allMix .cancel i {
+  font-size: 20px;
+  color: #d11e1e;
+  cursor: pointer;
+}
+.allMix .cancel i:hover {
+  transform: scale(1.3, 1.3);
+}
+
+.cartSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid green;
+}
+.cartSection .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  background-color: #4a6eb1;
+  color: white;
+}
+.cartSection .header .bag {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.cartSection .header .bag span {
+  font-size: 20px;
+}
+.cartSection .header .bag .count {
+  position: absolute;
+  top: -15px;
+  right: 25px;
+}
+.cartSection .mainSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cartSection .mainSection h1 {
+  color: #4a6eb1;
+}
+.cartSection .mainSection .products {
+  margin: 20px auto;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.cartSection .mainSection .products .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.cartSection .mainSection .products .info img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.cartSection .mainSection .products .info .description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cartSection .mainSection .products .info .description span {
+  padding: 0.2rem 0.5rem;
+  margin: 0px auto;
+  color: #3a475f;
+}
+.cartSection .mainSection .products .info .description button {
+  padding: 0.5rem;
+  border: none;
+  background-color: white;
+  color: #b34141;
+  font-weight: bold;
+  cursor: pointer;
+}
+.cartSection .mainSection .products .quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cartSection .mainSection .products .quantity span {
+  margin: 5px auto;
+}
+.cartSection .mainSection .products .quantity span i {
+  cursor: pointer;
+}
+.cartSection .mainSection .products .quantity span i:hover {
+  transform: scale(1.3, 1.3);
+}
+.cartSection .mainSection hr {
+  width: 60%;
+  color: #1f2633;
+  font-weight: bold;
+}
+.cartSection .mainSection .summary {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  color: #3a475f;
+}
+.cartSection .mainSection button {
+  padding: 0.5rem;
+  border: none;
+  background-color: white;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #c43939;
+  width: 200px;
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 0.8rem 0;
+}
+
+.Drinks {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Drinks .Navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.Drinks .Navbar .logo h1 {
+  color: #4a6eb1;
+}
+.Drinks .Navbar .links .link {
+  text-decoration: none;
+  font-size: 20px;
+}
+.Drinks .Navbar .links .link span {
+  cursor: pointer;
+  font-size: 20px;
+  margin: 5px;
+  padding: 1rem;
+}
+.Drinks .Navbar .links .link span:hover {
+  color: red;
+  transform: scale(2.3, 1.3);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .searchArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-top: 20px;
+}
+main .searchArea input {
+  font-size: 18px;
+  padding: 0.5rem 0.8rem;
+  border: 2px solid #1f2633;
+  border-radius: 5px;
+  z-index: 0;
+  color: #4a6eb1;
+}
+main .searchArea input:focus {
+  outline: none;
+}
+main .searchArea label {
+  background-color: white;
+  overflow: hidden;
+  z-index: 1;
+  position: absolute;
+  top: -10px;
+  color: #1f2633;
+}
+main .mainSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .mainSection h1 {
+  color: #4545af;
+}
+main .mainSection .listOfDrinks {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+main .mainSection .listOfDrinks .eachDrink {
+  width: 270px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+main .mainSection .listOfDrinks .eachDrink img {
+  width: 250px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+main .mainSection .listOfDrinks .eachDrink .name {
+  color: #466092;
+}
+main .mainSection .listOfDrinks .eachDrink .title {
+  color: #272b31;
+}
+main .mainSection .listOfDrinks .eachDrink .type {
+  color: #a19e9e;
+}
+main .mainSection .listOfDrinks .eachDrink span {
+  padding: 0.2rem 0.5rem;
+}
+main .mainSection .listOfDrinks .eachDrink .Link {
+  text-decoration: none;
+}
+main .mainSection .listOfDrinks .eachDrink button {
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #4b8f4b;
+  width: 200px;
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 0.8rem 0;
+}
+
+.singleDrink {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.singleDrink .details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+.singleDrink .details button {
+  padding: 0.5rem;
+  border: none;
+  background-color: white;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #d84a4a;
+  width: 200px;
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 0.8rem 0;
+}
+.singleDrink .details .information {
+  margin: 30px;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.singleDrink .details .information img {
+  width: 290px;
+  height: 290px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.singleDrink .details .information .info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.singleDrink .details .information .info div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 15px 20px;
+}
+.singleDrink .details .information .info div .same {
+  font-size: 15px;
+  background-color: #272b31;
+  color: white;
+  padding: 0.5rem;
+}
+.singleDrink .details .information .info div .normal {
+  margin-left: 10px;
+  font-size: 15px;
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .details .information {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+.about {
+  width: 80%;
+  height: 80vh;
+  font-size: 19px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}/*# sourceMappingURL=style.css.map */
